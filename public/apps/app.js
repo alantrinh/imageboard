@@ -51,6 +51,10 @@ var myApp = angular.module('imageboardApp', ['ui.router', 'ui.bootstrap'])
 
     serviceHttp.getComments($stateParams.id).then((res) => {
         $scope.comments = res;
+
+        for (let i = 0; i < $scope.comments.length; i++) { // convert date into a readable format
+            $scope.comments[i]['created_at'] = new Date ($scope.comments[i]['created_at']).toLocaleString();
+        }
     });
 
 
