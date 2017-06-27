@@ -53,7 +53,7 @@ var myApp = angular.module('imageboardApp', ['ui.router', 'ui.bootstrap'])
         $scope.comments = res;
 
         for (let i = 0; i < $scope.comments.length; i++) { // convert date into a readable format
-            $scope.comments[i]['created_at'] = new Date ($scope.comments[i]['created_at']).toLocaleString();
+            $scope.comments[i]['created_at'] = new Date($scope.comments[i]['created_at']).toLocaleString();
         }
     });
 
@@ -74,7 +74,7 @@ var myApp = angular.module('imageboardApp', ['ui.router', 'ui.bootstrap'])
         serviceSocial.addComment(commentData).then((addedCommentData) => {
             $('.comments-container').prepend(`
                 <div class="comment">
-                    <p>${addedCommentData.created_at}
+                    <p>${new Date(addedCommentData.created_at).toLocaleString()}
                     <p><span class="comment-name">${addedCommentData.name}</span> ${addedCommentData.comment}</p>
                 </div>
             `);
