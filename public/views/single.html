@@ -1,0 +1,29 @@
+<div class="single-photo-frame">
+    <div class="single-photo-wrapper">
+            <h2 class="user">{{photo.username}}</h2>
+            <img class="single-photo" src="{{photo.image}}"></a>
+            <h2 class="title">{{photo.title}}</h2>
+            <p class="description">{{photo.description}}</p>
+
+            <p><button class="like-button" ng-click="like()">♡</button>&nbsp<span id="image-likes">{{photo.likes}}</span></p>
+
+            <div id="comment-wrapper">
+                <p>Add a comment<p>
+                <p>Name</p>
+                <p><input type="text" name="name" id="name" ng-model="comment.name"></p>
+                <p>Comment</p>
+                <p><input type="text" name="description" id="comment" ng-model="comment.text"></p>
+                <p><button ng-click="submit(comment)" id="submit-comment">Submit</button></p>
+            </div>
+
+            <h2>Comments</h2>
+            <div class="comments-container">
+                <div class="comment" ng-if="comments.length > 0" ng-repeat="comment in comments">
+                    <p>{{comment.created_at}}
+                    <p><span class="comment-name">{{comment.name}}</span> {{comment.comment}}</p>
+                </div>
+            </div>
+    </div>
+
+
+</div>

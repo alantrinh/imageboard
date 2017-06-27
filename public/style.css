@@ -1,0 +1,203 @@
+body {
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+}
+
+nav a {
+    color: black;
+    background-color: white;
+    float: right;
+    margin-right: 20px;
+    border: 1px solid grey;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+.photo-frame {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.photo-wrapper {
+    height: 450px;
+    width: 400px;
+    margin: 5px;
+    text-align: center;
+}
+
+.photo {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.description {
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    margin: 0px 35px;
+}
+
+.single-photo-frame {
+    border: 1px dotted grey;
+    text-align: center;
+}
+
+.single-photo-wrapper {
+    margin: 5px;
+    text-align: center;
+}
+
+.single-photo {
+    max-width: 100%
+}
+
+#upload-wrapper {
+    text-align: center;
+}
+
+#upload-wrapper p input {
+    text-align: center;
+    border-radius: 5px;
+}
+
+#image {
+    text-align: center;
+}
+
+#description {
+    height: 150px;
+    width: 400px;
+}
+
+#upload {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+}
+
+#submit-comment {
+    color: black;
+    background-color: white;
+}
+
+input {
+    color: black;
+    text-align: center;
+}
+
+#file-input {
+    background-color: white;
+    display: inline;
+}
+
+.pagination {
+    background-color: white;
+    display: inline;
+    list-style-type: none;
+    padding: 2px;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.pagination a:hover {
+    color: grey;
+}
+
+.ng-scope.active {
+    font-weight: bold;
+}
+
+.ng-scope.active a:hover {
+    color: black;
+    cursor: default;
+}
+
+.like-button {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+.like-button:hover {
+    cursor: pointer;
+}
+
+#comment-wrapper {
+    border: 1px dotted grey;
+    width: 50%;
+    margin: auto;
+}
+
+.comments-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.comment {
+    border: 1px dotted grey;
+    display: block;
+    padding: 5px;
+    width: 50%;
+}
+
+.hashtag {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.hashtag:hover {
+    cursor: pointer;
+}
+
+.comment-name {
+    font-weight: bold;
+}
+
+#hashtag-search-container {
+    border: 1px dotted grey;
+    width: 30%;
+    margin: auto;
+}
+
+button:hover {
+    cursor: pointer;
+}

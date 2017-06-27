@@ -1,0 +1,17 @@
+<div style="border: 1px dotted grey; text-align: center">
+    <div class="photo-frame">
+        <div class="photo-wrapper" ng-if="photos.length > 0" ng-repeat="photo in paginatedPhotos">
+            <p class="user">{{photo.username}}</p>
+            <a ui-sref="singlePhoto({id: photo.id})"><img class="photo" src="{{photo.image}}"></a>
+            <p class="title">{{photo.title}}</p>
+            <p class="description" compile="photo.description"></p>
+        </div>
+    </div>
+    <div id="hashtag-search-container">
+        <h3>Hashtag Search</h3>
+        <input type="test" ng-model="hashtag"><button ng-click="searchHashtag(hashtag)">Search</button><br /><br />
+    </div>
+    <br />
+    <pagination class="pagination" ng-model="currentPage" total-items="photos.length" items-per-page="numPerPage" max-size="maxSize" boundary-links="true">
+    </pagination>
+</div>
